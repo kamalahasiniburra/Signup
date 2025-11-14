@@ -11,21 +11,7 @@ function login(username, password) {
         return false;
     }
 }
+
 function signup(username, password) {
-    if (password.length < 8) {
-        console.error("Signup failed: Password must be at least 8 characters long.");
-        return false;
-    }
-    
-    const userExists = USERS.some(user => user.username === username);
-    if (userExists) {
-        console.error(`Signup failed: Username '${username}' is already taken.`);
-        return false;
-    }
-
-    USERS.push({ username: username, password: password });
-    console.log(`User ${username} signed up successfully.`);
-    console.log("Current Users:", USERS);
-
-    return true;
+    console.warn("Signup is currently disabled or uses basic external storage.");
 }
